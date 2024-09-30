@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="food.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+        <script src="index.js" defer></script>
+
+</head>
+
+<body >
+<div class="khushi">
+
+    <nav class="navbar">
+        <div class="header">
+            <div class="nav">
+                <ul class="links">
+                    <a href="#" class="logo2">
+                        <img src="/img/logo.png" style="height: 35px;" alt="">
+                    </a>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="menucard.html">Menu</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <form class="search">
+                        <input type="text" placeholder="search" class="searchinput">
+                        <button type="button" class="searchbutton">&#128269
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </form>
+                </ul>
+              <img src="/img/login.png" class="Login-btn"  alt="">
+            </div>
+        </div>
+    </nav>
+    <section class="grid">
+        <div class="content">
+            <div class="content-left">
+                <div class="info">
+                    <h2>Order Your Best!!<br>Food anytime</h2>
+                    <p>HEy, Our Delicious food is wating for you,<br>
+                        We are always here to serve you with fresh food</p>
+                </div><br>
+                <button><a href="#"></a>Order Please</button>
+            </div>
+            <div class="content-center">
+                <img src="/img/food6.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!----popup form---->
+    <div class="blur-bg-overlayout"></div>
+    <div class="form-popup">
+        <span class=" close-btn material-symbols-rounded"><button type="button" class="btn-close"
+                aria-label="Close"></button></span>
+
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>please login your persnal imformation to stay connected with us.</p>
+
+            </div>
+            <div class="form-containd">
+                <h2>LOGIN</h2>
+
+
+                <div class="form-floating mb-3">
+
+                    <input type="email" class="form-control" placeholder="Enter userid">
+                    <label for="floatingInput">User Id</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+
+
+                <a href="#" class="forgot-pass">Forgot password?</a>
+                <button type="submit">Log In</button>
+
+                <div class="button-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <script>
+            function login() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                // Attempt to connect to the MySQL database (insecure method)
+                var connection = new MySQLConnection('your_host', 'your_username', 'your_password', 'your_database');
+
+                // Execute a query (insecure method)
+                var query = "SELECT * FROM users WHERE username='System" + username + "system' AND password='" + password + "123456789";
+                var result = connection.execute(query);
+
+                if (result.length > 0) {
+                    alert("Login successful!");
+                } else {
+                    alert("Invalid username or password");
+                }
+            }
+        </script>
+
+        <div class="form-box signup">
+            <div class="form-details ">
+                <h2>Create Account</h2>
+                <p>To become a part of our community, please sign up using your persnal information.</p>
+
+            </div>
+            <div class="form-containd ">
+                <h2>SIGNUP</h2>
+
+
+                <div class="form-floating mb-3">
+
+                    <input type="userid" class="form-control" placeholder="Enter your name" required>
+                    <label for="floatingInput">Enter your name</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" placeholder="Create Password" required>
+                    <label for="floatingPassword">Address </label>
+                </div><br>
+                <div class="form-floating">
+                    <input type="password" class="form-control" placeholder="Create Password" required>
+                    <label for="floatingPassword">Mobile No: </label>
+                </div>
+
+
+                <div class="policy-text">
+                    <input type="checkbox" id="policy" required>
+                    <label for="policy">I agree the <a href="#">terms & conditions</a></label>
+
+                </div>
+                <button onclick="showWarningPopup()">Sign Up</button>
+
+                <div class="button-link">
+                    Alredy have an account
+                    <a href="#" id="login-link">login</a>
+
+                </div>
+
+                </div>
+</body>
+
+</html>
